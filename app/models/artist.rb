@@ -34,7 +34,7 @@ class Artist
 
   #Returns an instance of the artist with the highest amount of paintings per year of experience.
   def self.most_prolific
-    self.all.max_by{|artist| artist.painting.count/artist.years_experience}
+    self.all.max_by{|artist| artist.painting.count.to_f/artist.years_experience}
   end
   
   def self.create_painting(title, price, gallery)
