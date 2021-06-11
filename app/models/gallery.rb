@@ -18,6 +18,7 @@ class Gallery
     end
 
 #Returns an array of all artists that have a painting in a gallery
+  
   def artists
     paintings.map do |artist_ins| 
     artist_ins.artist
@@ -25,6 +26,7 @@ class Gallery
   end
 
 #Returns an array of the names of all artists that have a painting in a gallery
+  
 def artist_names
   artists.map {|artist_ins|
   artist_ins.name}.uniq
